@@ -1,0 +1,150 @@
+*::before,
+*::after,
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: aqua;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1::before,
+h1::after {
+  content: "";
+  height: 2px;
+  width: 100vw;
+  background-color: blue;
+  position: absolute;
+  left: 0;
+}
+
+h1::after {
+  top: 34px;
+}
+
+.container {
+  border: 2px solid black;
+  width: 60vw;
+  height: 70vh;
+  top: 13vh;
+  left: 20vw;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+.sidebar {
+  background-color: blue;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+button,
+label {
+  background-color: rgb(230, 222, 222);
+  margin-top: 4px;
+}
+
+.mainbar {
+  background-color: yellow;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+ul li {
+  cursor: pointer;
+}
+
+.board {
+  width: 70%;
+  height: 70%;
+  margin: auto;
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-content: center;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell:first-child,
+:nth-child(2),
+:nth-child(3) {
+  border-top: none;
+}
+
+.cell:last-child,
+:nth-child(8),
+:nth-child(7) {
+  border-bottom: none;
+}
+
+.cell:nth-child(3n) {
+  border-right: none;
+}
+
+.cell:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.board.circle .cell:not(.cross):not(.circle):hover::after,
+.cell.circle::after {
+  content: "";
+  background-color: yellow;
+  height: 91px;
+  width: 87px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.board.circle .cell:not(.cross):not(.circle):hover::before,
+.cell.circle::before {
+  content: "";
+  background-color: blue;
+  height: 97px;
+  width: 93px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.board.cross .cell:not(.circle):not(.cross):hover::after,
+.cell.cross::after {
+  content: "";
+  background-color: blue;
+  position: absolute;
+  height: 97px;
+  width: 3px;
+  transform: rotate(-45deg);
+}
+
+.board.cross .cell:not(.circle):not(.cross):hover::before,
+.cell.cross::before {
+  content: "";
+  background-color: blue;
+  position: absolute;
+  height: 97px;
+  width: 3px;
+  transform: rotate(45deg);
+}
+
+.cell.circle,
+.cell.cross {
+  cursor: not-allowed;
+}
