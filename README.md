@@ -1,7 +1,9 @@
-Multiplayer Tic Tac Toe Game Documentation
+#Multiplayer Tic Tac Toe Game Documentation
+
 This documentation explains how to play the Multiplayer Tic Tac Toe game, which is built using Vanilla JavaScript and WebSockets.
 
 Installation
+
 To play the game, you first need to install Node.js on your device. You can download Node.js from the official website - https://nodejs.org/en/download/
 
 Once you have installed Node.js, follow the steps below:
