@@ -1,4 +1,4 @@
-#Multiplayer Tic Tac Toe Game Documentation
+3# Multiplayer Tic Tac Toe Game Documentation
 
 This documentation explains how to play the Multiplayer Tic Tac Toe game, which is built using Vanilla JavaScript and WebSockets.
 
