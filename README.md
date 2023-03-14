@@ -37,7 +37,7 @@ Each player takes turns to place their symbol (either X or O) on the board by cl
 
 The game ends when one player wins or the game ends in a draw.
 
-If one player leaves the game room or disconnects from the server, the game will end automatically.
+after the game ends, both players must refresh the page to start a new game
 
 Conclusion
 That's all you need to know to play the Multiplayer Tic Tac Toe game. Have fun!
